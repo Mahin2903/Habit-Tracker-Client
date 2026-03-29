@@ -24,30 +24,10 @@ const AddHabit = () => {
       createdAt: created_at,
     };
 
-    //     try {
-    //       const res = await fetch("http://localhost:3000/habits", {
-    //         method: "POST",
-    //         headers: {
-    //           "content-type": "application/json",
-    //         },
-    //         body: JSON.stringify(habitData),
-    //       });
-
-    //       const data = await res.json();
-    //       console.log(data);
-
-    //       alert("Habit added successfully!");
-    //       form.reset();
-    //     } catch (err) {
-    //       console.error(err);
-    //       alert("Something went wrong!");
-    //     } finally {
-    //       setLoading(false);
-    //     }
-    //   };
+ 
     AxiosInstance.post("/habits", habitData)
       .then((data) => {
-        console.log(data.data);
+        // console.log(data.data);
         Swal.fire({
           position: "top-end",
           icon: "success",

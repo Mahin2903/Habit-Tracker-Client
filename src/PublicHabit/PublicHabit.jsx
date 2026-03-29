@@ -15,7 +15,7 @@ const PublicHabit = () => {
       .then((res) => {
         
         setHabits(res.data);
-        console.log(res.data)
+        // console.log(res.data)
       })
       .catch((err) => {
         console.error(err);

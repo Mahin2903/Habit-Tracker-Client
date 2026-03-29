@@ -6,7 +6,7 @@ import UseAuth from "../Hooks/UseAuth";
 const Login = () => {
     const navigate = useNavigate();
     const location = useLocation();
-    console.log(location)
+    // console.log(location)
     const{ SignIn} = UseAuth();
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -14,13 +14,10 @@ const Login = () => {
     const form = e.target;
     const email = form.email.value;
     const password = form.password.value;
-
-    // const loginData = { email, password };
-    // console.log(loginData);
     SignIn(email, password)
     .then((result) =>{
         const user = result.user;
-        // console.log(user)
+        
         alert("Sign In Successfully");
         navigate("/");
 

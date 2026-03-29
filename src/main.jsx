@@ -1,7 +1,6 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
-import App from "./App.jsx";
 import { createBrowserRouter } from "react-router";
 import { RouterProvider } from "react-router/dom";
 import Root from "./Root/Root.jsx";
@@ -60,7 +59,9 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:3000/habits/${params.id}`),
+          fetch(
+            `https://habit-tracker-blue-kappa.vercel.app/habits/${params.id}`,
+          ),
       },
     ],
   },

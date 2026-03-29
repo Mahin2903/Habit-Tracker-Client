@@ -12,7 +12,7 @@ const HabitDetails = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  console.log(location);
+//   console.log(location);
 
   if (location.state) {
     navigate(location.state);
